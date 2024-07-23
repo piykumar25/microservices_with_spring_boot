@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+
+build:
+  version: "2.0"
+
+loans:
+  message: "Welcome to My Bank Accounts related Local APIs in QA"
+  contactDetails:
+    name: "Piyush Kumar-API Expert"
+    email: "bWJp9@example.com"
+  onCallSupport:
+    -(555)-555-5555
+    -(999)-999-9999

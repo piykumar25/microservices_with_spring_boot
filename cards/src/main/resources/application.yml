@@ -14,3 +14,24 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  config:
+    import:
+      - "application_qa.yml"
+      - "application_prod.yml"
+  profiles:
+    active:
+      - "prod"
+
+
+
+build:
+  version: "1.0"
+
+cards:
+  message: "Welcome to My Bank cards related Local APIs in Production environment"
+  contactDetails:
+    name: "Piyush Kumar-  Product owner"
+    email: "bWJp9@example.com"
+  onCallSupport:
+    -(555)-555-5555
+    -(999)-999-9999
