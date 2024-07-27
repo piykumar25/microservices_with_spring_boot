@@ -1,13 +1,8 @@
-spring:
-  config:
-    activate:
-      on-profile: "prod"
-
 build:
   version: "1.0"
 
 cards:
-  message: "Welcome to My Bank Cards related Local APIs in Production environment"
+  message: "Welcome to My Bank cards related Local APIs in Production environment"
   contactDetails:
     name: "Piyush Kumar-  Product owner"
     email: "bWJp9@example.com"

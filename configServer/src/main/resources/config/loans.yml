@@ -1,0 +1,11 @@
+build:
+  version: "3.0"
+
+loans:
+  message: "Welcome to My Bank loans related Local APIs in Dev"
+  contactDetails:
+    name: "Piyush Kumar-Developer"
+    email: "bWJp9@example.com"
+  onCallSupport:
+    -(555)-555-5555
+    -(999)-999-9999

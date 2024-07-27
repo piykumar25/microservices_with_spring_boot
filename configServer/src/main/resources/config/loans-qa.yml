@@ -1,12 +1,7 @@
-spring:
-  config:
-    activate:
-      on-profile: "qa"
-
 build:
   version: "2.0"
 
-accounts:
+loans:
   message: "Welcome to My Bank Accounts related Local APIs in QA"
   contactDetails:
     name: "Piyush Kumar-API Expert"

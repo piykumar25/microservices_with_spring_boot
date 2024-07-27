@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: "configServer"
+  profiles:
+#    active: native
+     active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/piykumar25/mybank-config.git"
+          username: "piykumar25"
+          password: "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"
+          default-label: "main"
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+#        native:
+#          search-locations: "classpath:/config"
+#          search-locations: "file:///C://Users//piyku//Documents//myBank_config_details/config"
+
+encrypt:
+  key: "s3cr3t20data"
+
+server:
+  port: 8071

@@ -1,0 +1,11 @@
+build:
+  version: "1.0"
+
+loans:
+  message: "Welcome to My Bank Accounts related Local APIs in Production environment"
+  contactDetails:
+    name: "Piyush Kumar-  Product owner"
+    email: "bWJp9@example.com"
+  onCallSupport:
+    -(555)-555-5555
+    -(999)-999-9999

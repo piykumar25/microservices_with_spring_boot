@@ -2,6 +2,12 @@ server:
   port: 8080
 
 spring:
+  application:
+    name: "accounts"
+  profiles:
+    active: "prod"
+  config:
+    import: "optional:configserver:http://localhost:8071/"
   datasource:
     url: jdbc:h2:mem:testDb
     driverClassName: org.h2.Driver
@@ -15,21 +21,3 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-  config:
-    import:
-      - "application_qa.yml"
-      - "application_prod.yml"
-  profiles:
-    active:
-      - "qa"
-build:
-  version: "3.0"
-
-accounts:
-  message: "Welcome to My Bank Accounts related Local APIs in Dev"
-  contactDetails:
-    name: "Piyush Kumar-Developer"
-    email: "bWJp9@example.com"
-  onCallSupport:
-    -(555)-555-5555
-    -(999)-999-9999
