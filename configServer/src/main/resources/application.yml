@@ -15,6 +15,25 @@ spring:
           timeout: 5
           clone-on-start: true
           force-pull: true
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
+management:
+  endpoints:
+    exposure:
+      include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
 #        native:
 #          search-locations: "classpath:/config"
 #          search-locations: "file:///C://Users//piyku//Documents//myBank_config_details/config"
