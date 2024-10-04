@@ -18,7 +18,7 @@ services:
   accountsdb:
     container_name: accountsdb
     ports:
-      - "3309:3306"
+      - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
     extends:
@@ -47,7 +47,7 @@ services:
       service: microservice-db-config
 
   configserver:
-    image: "piykumar05i/configserver:s7"
+    image: "piykumar05i/configserver:s8"
     container_name: "configserver-ms"
     ports:
       - "8071:8071"
@@ -64,9 +64,30 @@ services:
       file: common-config.yml
       service: microservice-base-config
 
+  eurekaserver:
+    image: "piykumar05i/eurekaserver:s8"
+    container_name: "eurekaserver-ms"
+    ports:
+      - "8070:8070"
+    healthcheck:
+      test: "curl --fail http://localhost:8070/actuator/health/readiness | grep UP || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    extends:
+      file: common-config.yml
+      service: microservice-configserver-config2
+    depends_on:
+      configserver:
+        condition: service_healthy
+    environment:
+      SPRING_APPLICATION_NAME: "eurekaserver"
+
+
 
   accounts:
-    image: "piykumar05i/accounts:s7"
+    image: "piykumar05i/accounts:s8"
     container_name: "accounts-ms"
     ports:
       - "8080:8080"
@@ -80,11 +101,11 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://accountsdb:3306/accountsdb
     extends:
       file: common-config.yml
-      service: microservice-configserver-config
+      service: microservice-eureka-config
 
 
   loans:
-    image: "piykumar05i/loans:s7"
+    image: "piykumar05i/loans:s8"
     container_name: "loans-ms"
     ports:
       - "8090:8090"
@@ -98,10 +119,10 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://loansdb:3306/loansdb
     extends:
       file: common-config.yml
-      service: microservice-configserver-config
+      service: microservice-eureka-config
 
   cards:
-    image: "piykumar05i/cards:s7"
+    image: "piykumar05i/cards:s8"
     container_name: "cards-ms"
     ports:
       - "9000:9000"
@@ -115,7 +136,7 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://cardsdb:3306/cardsdb
     extends:
       file: common-config.yml
-      service: microservice-configserver-config
+      service: microservice-eureka-config
 
 networks:
   myBank:

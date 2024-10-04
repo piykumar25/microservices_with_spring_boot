@@ -77,7 +77,7 @@
 				<version>3.4.3</version>
 				<configuration>
 					<to>
-						<image>docker.io/piykumar05i/configserver:s7</image>
+						<image>docker.io/piykumar05i/configserver:s8</image>
 					</to>
 				</configuration>
 			</plugin>

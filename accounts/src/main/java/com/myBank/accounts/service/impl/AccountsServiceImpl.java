@@ -18,6 +18,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 @Service
@@ -41,8 +42,7 @@ public class AccountsServiceImpl implements IAccountsService {
     private Accounts createNewAccount(Customer customer) {
         Accounts newAccount = new Accounts();
         newAccount.setCustomerId(customer.getCustomerId());
-        long randomAccNumber = 10000000000L + new Random().nextInt(900000000);
-
+        long randomAccNumber = ThreadLocalRandom.current().nextLong(10000000000L, 10000000000L + 900000000L);
         newAccount.setAccountNumber(randomAccNumber);
         newAccount.setAccountType(AccountsConstants.SAVINGS);
         newAccount.setBranchAddress(AccountsConstants.ADDRESS);
