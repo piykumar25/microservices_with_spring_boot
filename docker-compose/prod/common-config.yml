@@ -39,15 +39,24 @@ services:
     extends:
       service: microservice-base-config2
     environment:
-      SPRING_PROFILES_ACTIVE: default
+      SPRING_PROFILES_ACTIVE: prod
       SPRING_CONFIG_IMPORT: "configserver:http://configserver:8071/"
 
   microservice-configserver-config:
     extends:
       service: microservice-base-config
     environment:
-      SPRING_PROFILES_ACTIVE: prod
+      SPRING_PROFILES_ACTIVE: default
       SPRING_CONFIG_IMPORT: "configserver:http://configserver:8071/"
+
+  microservice-eureka-config-for-gatewayserver:
+    extends:
+      service: microservice-configserver-config
+    depends_on:
+      eurekaserver:
+        condition: service_healthy
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
 
   microservice-eureka-config:
     extends:

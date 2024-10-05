@@ -74,7 +74,7 @@
 				<version>3.4.3</version>
 				<configuration>
 					<to>
-						<image>docker.io/piykumar05i/${project.artifactId}:s8</image>
+						<image>docker.io/piykumar05i/${project.artifactId}:s9</image>
 					</to>
 				</configuration>
 			</plugin>

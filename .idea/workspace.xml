@@ -4,8 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b5112c8-ea63-4767-9572-e6bdb7c9c2c6" name="Changes" comment="Code changes for service discovery and service registration">
+    <list default="true" id="5b5112c8-ea63-4767-9572-e6bdb7c9c2c6" name="Changes" comment="Code changes for starting project of gateway service">
+      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/myBank/gatewayserver/filters/FilterUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/myBank/gatewayserver/filters/RequestTraceFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/myBank/gatewayserver/filters/ResponseTraceFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/ICustomersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/ICustomersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/client/CardsFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/client/CardsFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/client/LoansFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/client/LoansFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards/src/main/java/com/myBank/cards/controller/CardsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/java/com/myBank/cards/controller/CardsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/default/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/common-config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/prod/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/prod/common-config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/prod/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/prod/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/qa/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/qa/common-config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose/qa/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/qa/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurekaserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eurekaserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewayserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewayserver/src/main/java/com/myBank/gatewayserver/GatewayserverApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/myBank/gatewayserver/GatewayserverApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewayserver/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/src/main/java/com/myBank/loans/controller/LoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/java/com/myBank/loans/controller/LoansController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,24 +64,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.AccountsApplication.executor": "Debug",
-    "Application.CardsApplication.executor": "Run",
-    "Application.ConfigServerApplication.executor": "Run",
-    "Application.EurekaserverApplication.executor": "Run",
-    "Application.LoansApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.codeium.enabled": "true",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/microservices_with_spring_boot/gatewayserver",
-    "settings.editor.selected.configurable": "configurable.group.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.AccountsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CardsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ConfigServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.EurekaserverApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GatewayserverApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LoansApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/microservices_with_spring_boot/gatewayserver&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\microservices_with_spring_boot\docker-compose\qa" />
@@ -70,7 +97,7 @@
       <recent name="com.myBank.accounts.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AccountsApplication">
+  <component name="RunManager" selected="Application.GatewayserverApplication">
     <configuration name="AccountsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.myBank.accounts.AccountsApplication" />
       <module name="accounts" />
@@ -97,12 +124,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConfigServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.myBank.configServer.ConfigServerApplication" />
-      <module name="configServer" />
+    <configuration name="EurekaserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.myBank.eurekaserver.EurekaserverApplication" />
+      <module name="eurekaserver" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.myBank.configServer.*" />
+          <option name="PATTERN" value="com.myBank.eurekaserver.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,12 +137,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.myBank.eurekaserver.EurekaserverApplication" />
-      <module name="eurekaserver" />
+    <configuration name="GatewayserverApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.myBank.gatewayserver.GatewayserverApplication" />
+      <module name="gatewayserver" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.myBank.eurekaserver.*" />
+          <option name="PATTERN" value="com.myBank.gatewayserver.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GatewayserverApplication" />
+        <item itemvalue="Application.EurekaserverApplication" />
         <item itemvalue="Application.AccountsApplication" />
         <item itemvalue="Application.CardsApplication" />
         <item itemvalue="Application.LoansApplication" />
-        <item itemvalue="Application.EurekaserverApplication" />
-        <item itemvalue="Application.ConfigServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -179,20 +206,29 @@
       <option name="project" value="LOCAL" />
       <updated>1728111365821</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Code changes for starting project of gateway service">
+      <option name="closed" value="true" />
+      <created>1728112316919</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728112316920</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Code changes for configuration management in microservices" />
     <MESSAGE value="Code changes for service discovery and service registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code changes for service discovery and service registration" />
+    <MESSAGE value="Code changes for starting project of gateway service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code changes for starting project of gateway service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/loans/src/main/java/com/myBank/loans/controller/LoansController.java</url>
-          <line>255</line>
+          <line>262</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
