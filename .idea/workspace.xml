@@ -4,38 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b5112c8-ea63-4767-9572-e6bdb7c9c2c6" name="Changes" comment="Code changes for configuration management in microservices">
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/dto/CardsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/dto/CustomerDetailsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/dto/LoansDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/ICustomersService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/client/CardsFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/client/LoansFeignClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/AccountsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/AccountsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/entity/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/mapper/CustomerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/mapper/CustomerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/impl/AccountsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/impl/AccountsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configServer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/default/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/common-config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/default/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/prod/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/prod/common-config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/prod/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/prod/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/qa/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/qa/common-config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose/qa/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose/qa/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="5b5112c8-ea63-4767-9572-e6bdb7c9c2c6" name="Changes" comment="Code changes for service discovery and service registration" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -192,12 +161,21 @@
       <option name="project" value="LOCAL" />
       <updated>1726400391972</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Code changes for service discovery and service registration">
+      <option name="closed" value="true" />
+      <created>1728045888750</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728045888750</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Code changes for configuration management in microservices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code changes for configuration management in microservices" />
+    <MESSAGE value="Code changes for service discovery and service registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code changes for service discovery and service registration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
