@@ -37,3 +37,12 @@ logging:
     com:
       myBank:
         gatewayserver: DEBUG
+
+resilience4j.circuitbreaker:
+  config:
+    default:
+      slidingWindowSize: 10
+      permittedNumberOfCallsInHalfOpenState: 2
+      failureRateThreshold: 50
+      waitDurationInOpenState: 10000
+      timeoutDuration: 20000ms
