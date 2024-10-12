@@ -7,6 +7,7 @@ import com.myBank.accounts.dto.CustomerDto;
 import com.myBank.accounts.dto.ErrorResponseDto;
 import com.myBank.accounts.dto.ResponseDto;
 import com.myBank.accounts.service.IAccountsService;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import io.github.resilience4j.retry.annotation.Retry;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -114,9 +115,14 @@ public class AccountsController {
 
     @Operation(summary = "Get Java Version", description = "Get java version information that is deployed into accounts microservice")
     @ApiResponses({@ApiResponse(responseCode = "200", description = "Https Status OK"), @ApiResponse(responseCode = "500", description = "Https Status INTERNAL_SERVER_ERROR", content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))})
+    @RateLimiter(name = "getJavaVersion", fallbackMethod = "getJavaVersionFallback")
     @GetMapping("/java-version")
     public ResponseEntity<String> getJavaVersion() {
         return ResponseEntity.status(HttpStatus.OK).body(environment.getProperty("JAVA_HOME"));
+    }
+
+    public ResponseEntity<String> getJavaVersionFallback(Throwable throwable) {
+        return ResponseEntity.status(HttpStatus.OK).body("JAVA17");
     }
 
     @Operation(summary = "Get Contact Info", description = "Contact Info details that can be reached out in case of any issues")
