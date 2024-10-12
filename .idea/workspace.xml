@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b5112c8-ea63-4767-9572-e6bdb7c9c2c6" name="Changes" comment="Code changes to ignore workspace.xml">
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/client/CardsFallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/client/LoansFallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/myBank/gatewayserver/controller/FallbackController.java" afterDir="false" />
+    <list default="true" id="5b5112c8-ea63-4767-9572-e6bdb7c9c2c6" name="Changes" comment="Code changes for circuit breaker pattern">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/client/CardsFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/client/CardsFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/client/LoansFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/client/LoansFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/controller/AccountsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/controller/AccountsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatewayserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatewayserver/src/main/java/com/myBank/gatewayserver/GatewayserverApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/myBank/gatewayserver/GatewayserverApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatewayserver/src/main/java/com/myBank/gatewayserver/filters/ResponseTraceFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/src/main/java/com/myBank/gatewayserver/filters/ResponseTraceFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatewayserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gatewayserver/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/src/main/java/com/myBank/loans/controller/LoansController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/java/com/myBank/loans/controller/LoansController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +52,7 @@
     "Application.ConfigServerApplication.executor": "Run",
     "Application.EurekaserverApplication.executor": "Run",
     "Application.GatewayserverApplication.executor": "Run",
-    "Application.LoansApplication.executor": "Run",
+    "Application.LoansApplication.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.codeium.enabled": "true",
     "full.screen.before.presentation.mode": "false",
@@ -65,7 +60,10 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/microservices_with_spring_boot/gatewayserver",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -82,7 +80,7 @@
       <recent name="com.myBank.accounts.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LoansApplication">
+  <component name="RunManager" selected="Application.GatewayserverApplication">
     <configuration name="AccountsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.myBank.accounts.AccountsApplication" />
       <module name="accounts" />
@@ -96,12 +94,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.myBank.cards.CardsApplication" />
-      <module name="cards" />
+    <configuration name="ConfigServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.myBank.configServer.ConfigServerApplication" />
+      <module name="configServer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.myBank.cards.*" />
+          <option name="PATTERN" value="com.myBank.configServer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,9 +150,9 @@
       <list>
         <item itemvalue="Application.GatewayserverApplication" />
         <item itemvalue="Application.AccountsApplication" />
-        <item itemvalue="Application.EurekaserverApplication" />
         <item itemvalue="Application.LoansApplication" />
-        <item itemvalue="Application.CardsApplication" />
+        <item itemvalue="Application.EurekaserverApplication" />
+        <item itemvalue="Application.ConfigServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728394584067</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Code changes for circuit breaker pattern">
+      <option name="closed" value="true" />
+      <created>1728420955054</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728420955054</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -224,14 +230,15 @@
     <MESSAGE value="Code changes for starting project of gateway service" />
     <MESSAGE value="Code changes for Gateway, Routing and cross-cutting concerns in microservices" />
     <MESSAGE value="Code changes to ignore workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code changes to ignore workspace.xml" />
+    <MESSAGE value="Code changes for circuit breaker pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code changes for circuit breaker pattern" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/loans/src/main/java/com/myBank/loans/controller/LoansController.java</url>
-          <line>262</line>
+          <line>263</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -251,7 +258,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/accounts/src/main/java/com/myBank/accounts/controller/AccountsController.java</url>
-          <line>235</line>
+          <line>125</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
